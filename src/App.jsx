@@ -1,8 +1,11 @@
+import Nav from "./components/Nav";
+
 function App() {
   return (
-    <main>
-      Bloom
-    </main>
+    <>
+    <Nav/>
+      <main>Bloom</main>
+    </>
   )
 }
 
