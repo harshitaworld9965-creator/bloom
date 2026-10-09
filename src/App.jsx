@@ -1,6 +1,7 @@
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import Notes from "./components/Notes";
+import Closing from "./components/Closing";
 function App() {
   return (
     <>
@@ -8,6 +9,7 @@ function App() {
       <main>
         <Hero />
         <Notes />
+        <Closing />
       </main>
     </>
   )
