@@ -1,0 +1,98 @@
+/* Section */
+.notes {
+  padding: 8rem clamp(1.25rem, 4vw, 3rem);
+}
+
+/* Heading */
+.notes__header {
+  margin-bottom: 4rem;
+}
+
+.notes__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.notes__eyebrow::before {
+  content: '';
+  width: 2.5rem;
+  height: 1px;
+  background: currentColor;
+}
+
+.notes__title {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  letter-spacing: -0.02em;
+}
+
+.notes__title em {
+  font-style: italic;
+  background: linear-gradient(transparent 62%, var(--blush) 62%);
+  padding: 0 0.1em;
+}
+
+/* The three cards */
+.notes__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.note {
+  display: flex;
+  flex-direction: column;
+  min-height: 360px;
+  padding: 2rem;
+  border-top: 1px solid var(--plum);
+}
+
+.note:nth-child(2) {
+  background: rgba(232, 180, 184, 0.35);
+}
+
+.note__number {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.5rem;
+  color: var(--muted);
+  margin-bottom: auto;
+}
+
+.note__layer {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.note__name {
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  margin-bottom: 1rem;
+}
+
+.note__description {
+  max-width: 28ch;
+  font-size: 0.95rem;
+}
+
+/* Tablets and phones */
+@media (max-width: 900px) {
+  .notes {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .notes__list {
+    grid-template-columns: 1fr;
+  }
+
+  .note {
+    min-height: 260px;
+  }
+}
